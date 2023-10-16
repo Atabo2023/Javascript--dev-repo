@@ -456,3 +456,301 @@ console.log(Vic.age);
 
 // CHALLENGE
 // Vic is a 26-year old teacher, and he has a drivers license
+
+// getSummary: funtion() {
+//   return `${this.fistName} is a ${this.calcAge()} year old ${ Vic.job}, and he has ${this.hasDriversLicense ? "a" : "no"} driver's license.`
+// }
+// console.log(Vic.getSummary());
+
+// CHALLENGE #3 SECTION 4
+
+// Let's go back to Mark and John comparing their BMIs!
+
+// This time, let's use objects to implement the calculations! Remember: BMI = mass / (height * height) (mass in kg and height in meters).
+
+// Your tasks:
+
+// For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith). Name these objects as mark and john, and their properties exactly as fullName, mass and height.
+
+// Create a calcBMI method on each object to calculate the BMI (the same method on both objects). Assign the BMI value to a property, and also return it from the method.
+
+// Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
+
+// TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+// 👋 OPTIONAL: You can watch my solution in video format in the next lecture
+
+// IMPORTANT: The ** operator is not supported in this editor. Please make sure to use exactly this formula mass / (height * height), and not this one mass / (height ** 2).
+
+// SOLUTION TO THE CHALLENGE
+
+// TASK 1
+
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  // TASK 2
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const john = {
+  fullName: "John smith",
+  mass: 92,
+  height: 1.95,
+
+  // TASK 2
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmi, john.bmi);
+
+// TASK 3
+
+// "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI (${mark.bmi}) is higher than ${john.fullName}'s BMI (${john.bmi})`
+  );
+} else if (john.bmi > mark.bmi) {
+  console.log(
+    `${john.fullName}'s BMI (${john.bmi}) is higher than ${mark.fullName}'s BMI (${mark.bmi})`
+  );
+}
+
+// CHALLENGE #3 SECTION 4
+
+// Let's go back to Mark and John comparing their BMIs!
+
+// This time, let's use objects to implement the calculations! Remember: BMI = mass / (height * height) (mass in kg and height in meters).
+
+// Your tasks:
+
+// For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith). Name these objects as mark and john, and their properties exactly as fullName, mass and height.
+
+// Create a calcBMI method on each object to calculate the BMI (the same method on both objects). Assign the BMI value to a property, and also return it from the method.
+
+// Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
+
+// TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+// 👋 OPTIONAL: You can watch my solution in video format in the next lecture
+
+// IMPORTANT: The ** operator is not supported in this editor. Please make sure to use exactly this formula mass / (height * height), and not this one mass / (height ** 2).
+
+// SOLUTION TO THE CHALLENGE
+
+// TASK 1
+
+const vic = {
+  fullName: "Atabo Onuche",
+  mass: 85,
+  height: 40,
+
+  // Task 2
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+const onu = {
+  fullName: "Onuche victor",
+  mass: 50,
+  height: 2.6,
+
+  // TASK 2
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+vic.calcBMI();
+onu.calcBMI();
+console.log(vic.bmi, onu.bmi);
+
+// "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
+if (vic.bmi > onu.bmi) {
+  console.log(
+    `${vic.fullName}'s BMI (${vic.bmi}) is higher than ${onu.fullName}'s BMI (${onu.bmi}`
+  );
+} else if (onu.bmi > vic.bmi) {
+  console.log(
+    `${onu.fullName} BMI (${onu.bmi}'s) is higher than (${vic.fullName}) BMI (${vic.bmi}`
+  );
+}
+
+// LOOP TUTORIAL 46
+// console.log("liftings weights repetition 1");
+// console.log("liftings weights repetition 2");
+// console.log("liftings weights repetition 3");
+// console.log("liftings weights repetition 4");
+// console.log("liftings weights repetition 5");
+// console.log("liftings weights repetition 6");
+// console.log("liftings weights repetition 7");
+// console.log("liftings weights repetition 8");
+// console.log("liftings weights repetition 9");
+// console.log("liftings weights repetition 10");
+
+// FOR LOOP KEEPS RUNNING WHILE CONDITION IS TRUE
+
+for (let rep = 1; rep <= 3; rep++) {
+  console.log(`liftings weights repetition ${rep}`);
+}
+
+const onuche = [
+  "Victor",
+  "Atabo",
+  2023 - 1997,
+  "programmer",
+  ["Isa", "Success", "Victor"],
+  true,
+];
+const types = [];
+
+// console.log(onuche[0]),
+// console.log(onuche[1]))
+//   ...
+//   console.log(onuche[4])
+
+// onuche[5 does not exist]
+
+for (let i = 0; i < onuche.length; i++) {
+  // reading from onuche Array
+  console.log(onuche[1], typeof onuche[1]);
+
+  // filling types array
+  types[i] = typeof onuche[i];
+  // 2nd methods
+  types.push(typeof onuche[i]);
+}
+
+console.log(types);
+
+const year = [1991, 2007, 1969, 1997];
+const age = [];
+
+for (let i = 0; i < year.length; i++) {
+  age.push(2023 - year[i]);
+}
+console.log(age);
+
+// continue and break loop statement
+console.log("---ONLY STRING ---");
+for (let i = 0; i < onuche.length; i++) {
+  if (typeof onuche[1] !== "string") continue;
+
+  console.log(onuche[1], typeof onuche[1]);
+}
+
+console.log("--- BREAK WITH NUMBER ---");
+for (let i = 0; i < onuche.length; i++) {
+  if (typeof onuche[i] === "number") break;
+
+  console.log(onuche[i], typeof onuche[1]);
+}
+
+// loops inside a loops
+const onuc = [
+  "Victor",
+  "Atabo",
+  2023 - 1997,
+  "programmer",
+  ["Isa", "Success", "Victor"],
+  true,
+];
+
+// 0, 1, ... 4
+// 4, 3, ... 0
+for (let i = onuc.length - 1; i >= 0; i--) {
+  console.log(i, onuc[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`---------Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`exercise ${exercise}: lifting weight repetition ${rep}`);
+  }
+}
+
+// WHILE LOOPS
+for (let rep = 1; rep <= 3; rep++) {
+  console.log(`liftings weights repetition ${rep}`);
+}
+
+let rep = 1;
+while (rep <= 10) {
+  // console.log(`WHILE: Lifting weights repetition ${rep}`);
+  rep++;
+}
+let dice = Math.trunc(Math.random() * 6) + 1;
+console.log(dice);
+
+while (dice !== 6) {
+  console.log(`You rolled a ${dice}`);
+  dice = Math.trunc(Math.random() * 6) + 1;
+  if (dice === 6) console.log("Loop is about to end...");
+}
+
+// CHALLENGE #4
+// Let's improve Steven's tip calculator even more, this time using loops!
+
+// Your tasks:
+
+// Create an array called bills containing all 10 test bill values.
+
+// Create empty arrays for the tips and the totals (tips and totals)
+
+// Use the calcTip function we wrote before (included in the starter code) to calculate tips and total values (bill + tip) for every bill value in the bills array. Use a for loop to perform the 10 calculations!
+
+// TEST DATA: 22, 295, 176, 440, 37, 105, 10, 1100, 86, and 52.
+
+// BONUS:
+
+// Write a function calcAverage which takes an array called arr as an argument. This function calculates the average of all numbers in the given array. This is a DIFFICULT challenge (we haven't done this before)! Here is how to solve it if you feel like it:
+
+// First, you will need to add up all values in the array. To do the addition, start by creating a variable sum that starts at 0. Then loop over the array using a for loop. In each iteration, add the current value to the sum variable. This way, by the end of the loop, you have all values added together.
+
+// To calculate the average, divide the sum you calculated before by the length of the array (because that's the number of elements).
+
+// Call the function with the totals array.
+
+// SOLUTION
+const calcTips = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bils = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
+const tip = [];
+const total = [];
+
+for (let i = 0; i < bils.length; i++) {
+  const tip = calcTips(bils[i]);
+  tips.push(tip);
+  total.push(tip + bils[i]);
+}
+console.log(bils, tip, total);
+
+// BONUS
+const calcAverag = function (arr) {
+  let sum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    // sum = sum + arr[i];
+    sum += arr[i];
+  }
+  return sum / arr.length;
+};
+console.log(calcAverag([2, 3, 7]));
+console.log(calcAverag(total));
+console.log(calcAverag(tips));
